@@ -1,0 +1,573 @@
+/* =========================
+   General
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f7f7f7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 30px;
+}
+
+
+/* =========================
+   Navigation
+   ========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   Hero
+   ========================= */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 30px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.eyebrow {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 90px);
+    line-height: 1;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    margin: 25px 0 10px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+
+/* =========================
+   Buttons
+   ========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    background: #222;
+    color: white;
+
+    border: 2px solid #222;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: transparent;
+    color: #222;
+}
+
+.button-outline {
+    background: transparent;
+    color: #222;
+}
+
+.button-outline:hover {
+    background: #222;
+    color: white;
+}
+
+
+/* =========================
+   Section Headings
+   ========================= */
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-number {
+    margin: 0 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+h2 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h3 {
+    line-height: 1.2;
+}
+
+
+/* =========================
+   About
+   ========================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.about-image {
+    min-height: 350px;
+}
+
+
+/* =========================
+   Profile image
+   ========================= */
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   Experience
+   ========================= */
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.experience-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 40px;
+
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+}
+
+.experience-date {
+    font-size: 14px;
+    color: #777;
+}
+
+.experience-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 35px;
+    align-items: start;
+}
+
+.experience-content h3 {
+    font-size: 28px;
+    margin: 0 0 5px;
+}
+
+.role {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.experience-content ul {
+    padding-left: 20px;
+}
+
+.experience-image {
+    width: 100%;
+}
+
+.experience-image img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   Projects
+   ========================= */
+
+.section-introduction {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #ddd;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 30px;
+}
+
+.project-course {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+.project-info h3 {
+    font-size: 26px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.project-tags span {
+    padding: 5px 10px;
+    background: #eee;
+    font-size: 12px;
+}
+
+
+/* =========================
+   Skills
+   ========================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.skill-category {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.skill-category h3 {
+    font-size: 24px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    padding: 7px 0;
+}
+
+
+/* =========================
+   Interests
+   ========================= */
+
+.interests-content {
+    font-size: 18px;
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.interest {
+    background: white;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.interest-image {
+    height: 220px;
+}
+
+.interest-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.interest-info {
+    padding: 25px;
+}
+
+.interest h3 {
+    font-size: 23px;
+    margin-top: 0;
+}
+
+
+/* =========================
+   Strengths / Contribution
+   ========================= */
+
+.two-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+}
+
+.two-column h3 {
+    font-size: 27px;
+}
+
+.contribution-content,
+.goals-content {
+    max-width: 800px;
+    font-size: 20px;
+}
+
+
+/* =========================
+   Career Goals
+   ========================= */
+
+.goals-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.goals-content {
+    max-width: none;
+}
+
+.goals-image {
+    width: 100%;
+}
+
+.goals-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   Contact
+   ========================= */
+
+#contact {
+    max-width: 1100px;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.contact-content {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact-content h2 {
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    font-size: 18px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    section {
+        padding: 70px 25px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .experience-main {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-image img {
+        height: 250px;
+    }
+
+    .goals-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .goals-image img {
+        height: 300px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+}
